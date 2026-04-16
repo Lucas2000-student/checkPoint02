@@ -1,13 +1,14 @@
-import { router } from "expo-router";
-import { Button, StyleSheet, Text, View } from "react-native";
+import { useRouter } from "expo-router"
+import { Button,Text , View, StyleSheet } from "react-native"
 
 export default function Footer() {
+    const router = useRouter()
+
     return (
         <View style={styles.container}>
             <Text style={styles.text}>FIAP - Mobile Application Development</Text>
-            <Button title="Voltar" onPress={() => router.back()} />
+            <Button title='Voltar' onPress={() => router.back()} />
         </View>
-
     );
 }
 
